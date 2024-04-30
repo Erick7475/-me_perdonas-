@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disculpas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      text-align: center;
+      margin-top: 50px;
+    }
+    
+    #image {
+      width: 300px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    
+    #message {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+    
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-right: 10px;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    
+    #yes {
+      background-color: green;
+      color: white;
+    }
+    
+    #no {
+      background-color: red;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img id="image" src="meme raton.webp" alt="Imagen de disculpa">
+    <p id="message">¿Me perdonas?</p>
+    <a href="yay.html" class="button" id="yes">Sí</a>
+    <button class="button" id="no" onclick="moveButton()">No</button>
+  </div>
+
+  <script>
+    function moveButton() {
+      var button = document.getElementById("no");
+      var xPos = Math.random() * (window.innerWidth - button.offsetWidth);
+      var yPos = Math.random() * (window.innerHeight - button.offsetHeight);
+      button.style.position = "absolute";
+      button.style.left = xPos + "px";
+      button.style.top = yPos + "px";
+    }
+  </script>
+</body>
+</html>
